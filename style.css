@@ -23,7 +23,7 @@ scroll-behavior: smooth;
 }
 
 .ghost-fly{
-    bottom: -120px;                 
+    bottom: -140px;                 
     left: 50%;
     transform: translateX(-50%);             /*центровка*/
 }
@@ -129,14 +129,14 @@ margin-bottom: 5%;
 /*___________________________КНОПКА НАВЕРХ_______________________________*/
 .up {     
 font-family: 'Ysabeau Infant', sans-serif;
-font-size: 80%;
+font-size: 90%;
 position: fixed;
-width: 2%;
+width: 3%;
 right: 60px;
-bottom: 10px;
+bottom: 30px;
 color: #d3d3d3a0;
 text-decoration: none;
-z-index: 30;
+z-index: 100;
 
 }
 .up:hover{
