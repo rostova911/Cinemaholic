@@ -1,0 +1,22 @@
+@keyframes ghostFly {
+    to{
+        transform: translateX(-50%) translateY(-100vh);
+        opacity: 0.1;
+    }
+}
+
+@keyframes ghostCrawl {
+    to{
+        transform: translateX(-100vw);
+        opacity: 0.1;
+    }
+}
+
+
+@keyframes spin {
+
+    to{
+        transform: rotate(360deg);
+        
+    }
+}

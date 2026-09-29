@@ -1,0 +1,123 @@
+@media screen and (max-width: 1200px) {
+
+.attachment {
+    max-height: 350px;
+}
+}
+
+
+@media screen and (max-width: 900px) {
+
+.attachment {
+    background-position: 0 30%;
+    max-height: 250px;
+}
+}
+
+@media screen and (max-width: 750px) {
+
+    .attachment {
+    background-position: 0 30%;
+    max-height: 230px;
+}
+
+    .titleKinocritics{
+    margin-top: 20px;
+}   
+}
+
+
+@media screen and (max-width: 600px) {
+
+.attachment {
+    background-position: 0 30%;
+    max-height: 150px;
+}
+
+.titleKinocritics{
+margin-top: 30px;
+}
+
+p:not(.actors-moving-block p), span{
+    font-size: 0.8em;
+}
+
+.logo img, .menu-and-title img{
+    width: 40px;
+}
+
+.play-button{
+    width: 20%;
+    top: 40%;
+    left: 40%;
+}
+}
+
+
+@media screen and (max-width: 400px) {
+
+.titleKinocritics{
+  margin-top: 30px;
+}
+
+.attachment {
+    background-position: 0 20%;
+    height: 150px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@media screen and (min-width: 400px) and (max-width: 431px) {
+.quote p{
+font-size: 10px;
+margin-left: 70%;
+margin-top: 7%;
+margin-bottom: 5%; 
+}
+
+.attachment {
+background-repeat: no-repeat;
+background-position: 75% 10%;
+height: 150px;
+margin-bottom: 10%;
+}
+
+.titleKinocritics {
+font-size: smaller;
+}
+}
+
+
+
+@media screen and (max-width: 399px) {
+.quote p{
+font-size: 10px;
+margin-left: 70%;
+margin-top: 7%;
+margin-bottom: 5%; 
+}
+.titleKinocritics {
+font-size: 12px;
+}
+
+.attachment {
+background-repeat: no-repeat;
+background-position: 0 100px;
+height: 130px;
+margin-bottom: 15%;
+}
+} */

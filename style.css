@@ -9,13 +9,26 @@ font-family: 'Ysabeau SC', sans-serif;
 color: rgb(255, 255, 255);
 }
 
+h3{
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ff9410;
+    width: 200px;
+    font-size: 18px;
+}
+
+a{ text-decoration: none;}
+
 
 /*____________ПЛАВНЫЙ ПЕРЕХОД ПО ССЫЛКЕ КНОПКИ НАВЕРХ СТРАНИЦЫ_____________*/
 html{           
 scroll-behavior: smooth;
 }
 
-/*____________ПРИВИДЕНИЯ_____________*/
+/*____________________________ОБЩИЕ ФИКСИРОВАННЫЕ ЭЛЕМЕНТЫ_________________________________________*/
+
+/*______ПРИВИДЕНИЯ*/
 .ghost-fly, .ghost-crawl, .ghost-peek {
     position: fixed;
     opacity: 1;
@@ -31,13 +44,6 @@ scroll-behavior: smooth;
      animation: ghostFly 3s linear;
 }
 
-@keyframes ghostFly {
-    to{
-        transform: translateX(-50%) translateY(-100vh);
-        opacity: 0.1;
-    }
-}
-
 .ghost-crawl {
     right: -100px;
     bottom: -28px;
@@ -47,15 +53,10 @@ scroll-behavior: smooth;
    animation: ghostCrawl 3s linear ;
    
 }
-@keyframes ghostCrawl {
-    to{
-        transform: translateX(-100vw);
-        opacity: 0.1;
-    }
-}
 
 .ghost-peek {
-    right: -55px;
+    max-width: 80px;
+    right: -50px;
     top: 10%;
     transform-origin: 100% 100%;  
     transition: 1s; 
@@ -65,80 +66,15 @@ scroll-behavior: smooth;
     transform: rotate(-40deg);
 }
 
+/*______КНОПКА НАВЕРХ*/
 
-
-/*______________________ ШАПКА__________________________*/
-header {        
-display: flex; 
-justify-content: space-between;
-align-items: center;
-background-color: black;
-box-shadow:  0 0 15px 13px #f60df2;
-}
-
-/*______________________МЕНЮ__________________________*/
-.hidden-menu{
-position: absolute;
-margin-left: 5%;
-background-color: rgba(43, 42, 42, 0.621);
-text-align: center;
-}
-
-.hidden{
-display: none;
-}
-
-.hidden-menu div{
-padding: 15px;
-}
-
-.hidden-menu div:hover{
-background-color: rgba(255, 255, 255, 0.177);
-}
-
-.logo{
-width: 30%;
-margin-right: 2%;
-display: flex;
-align-items: center;
-justify-content: end;
-gap:7%;
-font-size: 20px;
-}
-
-.menu-and-title{
-display: flex;
-align-items: center;
-gap: 10px;
-margin-left: 5%;
-}
-
-.menu-and-title img:hover{
-scale: 1.1;
-}
-
-/*______________________ЦИТАТА ПЕРВАЯ__________________________*/
-
-.quote p{
-margin-left: 55%;
-margin-top: 6%;
-margin-bottom: 5%; 
-}
-
-
-/*___________________________КНОПКА НАВЕРХ_______________________________*/
 .up {     
-font-family: 'Ysabeau Infant', sans-serif;
-font-size: 90%;
 position: fixed;
-width: 3%;
-right: 60px;
-bottom: 30px;
+bottom: 20px;
+right: 20px;
 color: #d3d3d3a0;
-text-decoration: none;
-z-index: 100;
-
 }
+
 .up:hover{
 color:#ffffffbb;
 scale: 1.1;
@@ -146,30 +82,98 @@ scale: 1.1;
 
 
 
+
+
+
+/*______________________ ШАПКА__________________________*/
+
+header {        
+display: flex; 
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+background-color: black;
+box-shadow:  0 0 15px 13px #f60df2;
+}
+
+/*______________________МЕНЮ__________________________*/
+
+.hidden-menu{
+position: absolute;
+background-color: rgba(43, 42, 42, 0.621);
+text-align: center;
+}
+
+.hidden{
+display: none;
+}
+.hidden-menu div{
+padding: 2px 10px
+}
+.hidden-menu div:hover{
+background-color: rgba(255, 255, 255, 0.177);
+}
+
+.menu-and-title{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.menu-and-title img:hover{
+scale: 1.1;
+}
+
+.logo{
+display: flex;
+align-items: center;
+justify-content: end;
+gap:7%;
+font-size: 20px;
+}
+
+
+
+
+/*______________________ЦИТАТА ПЕРВАЯ__________________________*/
+
+.quote {
+text-align: end;
+padding: 30px;
+}
+
+
+
+
+
 /*_____________________________СКРОЛЛ-ФОН__________________________________*/
+
 .attachment {
 background: url('pics/773117.jpg');
 background-size: 100%;
+background-position: 0 15%;
 background-repeat: no-repeat;
 background-attachment:fixed;
-height: 330px;
-margin-bottom: 5%;
+height: 50vh;
 }
 
 
 
 /*______________________ОГЛАВЛЕНИЕ КРИТИКИ РЕКОМЕНДУЮТ______________________*/
+
 .titleKinocritics {
 box-shadow: 14px 0 15px 8px #150df6;
 display: flex;
 width: 50%;
 padding: 5px 3%;
+margin-top: 50px;
 justify-content: end;
 text-align: end;
 }
 
 
 /*______________________БЛОКИ и ПОСТЕР ОПИСАНИЕ______________________________*/
+
 .serial{
 display: flex;
 justify-content: center;
@@ -220,52 +224,61 @@ overflow: hidden;
 }
 
 
-/*_______________________________СЛАЙДЕР_______________________________*/
 
-.slider-outer-block{
+/*------------------СЛАЙДЕР---------------------*/
+
+.slider_bgrnd{
 position: fixed;
-display: flex;
 top: 0;
-left:0;
+left: 0;
 width: 100%;
 height: 100%;
-background-color: #101010e5;
+background-color: rgba(0, 0, 0, 0.835);
 z-index: 100;
+display: flex;
+justify-content: center;   
+align-items: center;
 }
 
-.slider{
-position: relative;
-top:50%;
-left:50%;
-width: 50%;
-height: 40%;
-transform: translate(-50%, -50%);
+.hidden {
+display:none;
+}
+
+.back_img_next{
+display: inline-flex;
+max-width: 970px;
+justify-content: center;
+max-height: 400px;
+margin: 0 10px;
+}
+
+.slide_back, .slide_next {
+max-width: 6%;
 display: flex;
 justify-content: center;
 align-items: center;
-
+background-color: rgba(190, 0, 120, 0.489);
 }
 
-.close-button{
-position: absolute;
-margin-left: 108%; 
-margin-top: -60%;
+.slide_back img, .slide_next img{
+max-width: 50%;
 }
 
-.close-button:hover{
-scale: 1.1;
+.slider_img{
+max-width: 800px;
+max-height: 400px;
+overflow: hidden;
 }
 
-
-.hidden{
-display: none;
+.slider_img img{
+width: 100%;
+object-fit: cover
 }
-
-
 
 
 
 /*____________________________БЛОКИ САУНДТРЕКИ______________________________*/
+
 .audio {
 display: flex;
 justify-content: center;
@@ -291,7 +304,6 @@ border-radius: 0 15px 15px 0;
 
 
 /*_______________________________ОГЛАВЛЕНИЕ ЛЮБИМЧИКИ ГОЛЛИВУДА_______________________________*/
-
 
 .title-lovers{
 box-shadow: 1px 2px 15px 8px  #ffbc13;
@@ -344,9 +356,11 @@ box-shadow: 0 0 9px 3px #ffbc13;
     scale: 1.1;
 }
 
-a{ text-decoration: none;}
 
-/*____________________________ВСПЛЫВАЮЩАЯ ФИЛЬМОГРАФИЯ НА ФОТО АКТЕРОВ_______________________________*/
+
+
+
+/*________________________ВСПЛЫВАЮЩАЯ ФИЛЬМОГРАФИЯ НА ФОТО АКТЕРОВ_______________________________*/
 
 .actors-card{
     width: 200px;
@@ -359,6 +373,7 @@ a{ text-decoration: none;}
 .actors-moving-block{
     position: absolute;
     justify-items: center;
+    margin-top: -45px;
     background-color: #101010ac;
     text-align: center;
     transition: 1s;
@@ -375,18 +390,12 @@ a{ text-decoration: none;}
 }
 
 
-h3{
-    color: #000000;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #ff9410;
-    width: 200px;
-    font-size: 18px;
-}
+
 
 
 
 /*_________________________ОГЛАВЛЕНИЕ HOLLYWOOD__________________________________*/
+
 .position-title-hollywood{
     display: flex;
     justify-content: end;
@@ -407,146 +416,83 @@ padding: 5px 30px;
 
 
 
-
-
-
-@media screen and (max-width: 1025px) { 
-.slider{
-top:50%;
-left:50%;
-width: 80%;
-height: 40%;
-}
-
-.close-button{
-margin-left: 110%; 
-margin-top: -78%;
-}
-
-.attachment {
-background-repeat: no-repeat;
-background-position: 0 15%;
-height: 200px;
-margin-bottom: 10%;
-}
-
-}
-
-
-@media screen  and (max-height: 721px)  {
-.slider{
-top:50%;
-left:50%;
-width: 50%;
-height: 30%;
-}
-
-.close-button{
-margin-left: 112%;
-margin-top: -70%;
-}
-
-.attachment {
-background-repeat: no-repeat;
-background-position: 0 15%;
-margin-bottom: 7%;
-}
-
-}
-
-
-
-@media screen and (min-width: 400px) and (max-width: 431px) {
-.quote p{
-font-size: 10px;
-margin-left: 70%;
-margin-top: 7%;
-margin-bottom: 5%; 
-}
-
-.attachment {
-background-repeat: no-repeat;
-background-position: 75% 10%;
-height: 150px;
-margin-bottom: 10%;
-}
-
-.titleKinocritics {
-font-size: smaller;
-}
-}
-
-
-@media screen and (max-width: 399px) {
-.quote p{
-font-size: 10px;
-margin-left: 70%;
-margin-top: 7%;
-margin-bottom: 5%; 
-}
-.titleKinocritics {
-font-size: 12px;
-}
-
-.attachment {
-background-repeat: no-repeat;
-background-position: 0 100px;
-height: 130px;
-margin-bottom: 15%;
-}
-}
-
-.hollywood-block1 {
+/* .hollywood-block1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
     padding: 70px;
-    
-}
-.hollywood-img {
-    display: flex;
-    width: 400px;
-    justify-content: center;
-    align-items: center;
-    animation-play-state: running;
-    animation: rotate 20s linear infinite;
-    margin-top: -50px;
 }
 
-.rotate {
-    animation-play-state: paused;
-   }
+.hollywood-block1-title {
+    width: 600px;
+}
 
-.hollywood-img :first-child{
-    margin-left: -161px;
+.hollywood-box-disc{
+  position: relative;          
+  display: inline-block;      
+  width: 350px;  
+  
+}
+
+.disc {
+    display: block;              
+    width: 100%;                 
+    height: auto;  
+    animation: spin 20s linear infinite;
 }
 
 .play-button {
-    position:relative;
-    margin-left: -215px;
-    z-index: 10;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    max-width:80px; 
+    animation: spin 20s linear infinite;
     filter: opacity(0.5);
+} */
+
+
+.hollywood-main-block{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.hollywood-box-disc {
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 20s linear infinite;
+}
+
+.disc {
+   width: 350px;
+}
+
+.play-button {
+    position: absolute;
+}
+
+
+
+.hollywood-description{
+    max-width: 600px;
+    padding: 0 20px;
 }
 
 .play-button:hover {
     scale: 1.1;
 }
 
-@keyframes rotate {
+.rotate {
+    animation-play-state: paused;
+   }
 
-    from{
-       
-    }
-    
-    to{
-        rotate: 360deg;
-    }
-}
 
-.hollywood-block1-title {
-    width: 600px;
-}
 
 .oscar-img{
     position: relative;
