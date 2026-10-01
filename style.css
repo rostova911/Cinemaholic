@@ -149,12 +149,14 @@ padding: 30px;
 /*_____________________________СКРОЛЛ-ФОН__________________________________*/
 
 .attachment {
-background: url('pics/773117.jpg');
-background-size: 100%;
-background-position: 0 15%;
-background-repeat: no-repeat;
-background-attachment:fixed;
-height: 50vh;
+max-height: 600px;
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+
+.attachment img{
+width: 100%;
 }
 
 
@@ -166,7 +168,7 @@ box-shadow: 14px 0 15px 8px #150df6;
 display: flex;
 width: 50%;
 padding: 5px 3%;
-margin-top: 50px;
+margin-top: 70px;
 justify-content: end;
 text-align: end;
 }
